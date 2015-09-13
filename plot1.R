@@ -7,5 +7,6 @@ import_subset <- subset(import, Date >= "2007-02-01" & Date <= "2007-02-02")
 
 # CREATE PLOT1 AND SAVE TO PNG FILE
 png("plot1.png",width=480,height=480 ,res=100)
+par(cex.lab = 0.7, cex.axis = 0.7, cex.main = 0.8)
 hist(import_subset$Global_active_power, xlab="Global Active Power (kilowats)", main="Global Active Power", col="red")
 dev.off()
