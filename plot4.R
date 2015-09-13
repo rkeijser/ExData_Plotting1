@@ -9,9 +9,9 @@ import_subset$DateTime <- as.POSIXct(paste(import_subset$Date,import_subset$Time
 # CREATE PLOT4 AND SAVE TO PNG FILE
 Sys.setlocale("LC_TIME", "C")
 png("plot4.png",width=480,height=480 ,res=100)
-par(mfrow = c(2, 2), mar = c(5, 4, 1, 1))
+par(mfrow = c(2, 2), cex.axis = 0.8, cex.lab = 0.8, mar = c(5, 4, 1, 1))
 
-plot(import_subset$DateTime, import_subset$Global_active_power, type="l", xlab="", ylab="Global Active Power (kilowatts)")
+plot(import_subset$DateTime, import_subset$Global_active_power, type="l", xlab="", ylab="Global Active Power")
 
 plot(import_subset$DateTime, import_subset$Voltage, type="l", xlab="datetime", ylab="Voltage")
 
